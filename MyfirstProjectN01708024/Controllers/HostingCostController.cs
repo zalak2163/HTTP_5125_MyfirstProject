@@ -23,14 +23,14 @@ namespace MyfirstProjectN01708024.Controllers
 		///total = chargetoclient + hstcost;
 		/// </returns>
 		/// <example>
-		/// GET :localhost:xx/api/HostingCost/0 --->1 fortnights at $5.50/FN = $5.5 CAD HST 13% = $0.715 CAD Total = $6.22 CAD
+		/// GET :localhost:xx/api/HostingCost/0 --->1 fortnights at $5.50/FN = $5.5 CAD HST 13% = $0.715 CAD Total = $6.215 CAD
 		/// GET :localhost:xx/api/HostingCost/14 --->2 fortnights at $5.50/FN = $11 CAD HST 13% = $1.43 CAD Total = $12.43 CAD
 		/// GET :localhost:xx/api/HostingCost/15-->2 fortnights at $5.50/FN = $11 CAD HST 13% = $1.43 CAD Total = $12.43 CAD
 		/// GET :localhost:xx/api/HostingCost/21-->2 fortnights at $5.50/FN = $11 CAD HST 13% = $1.43 CAD Total = $12.43 CAD
-		/// GET :localhost:xx/api/HostingCost/28-->3 fortnights at $5.50/FN = $16.5 CAD HST 13% = $2.145 CAD Total = $18.65 CAD
+		/// GET :localhost:xx/api/HostingCost/28-->3 fortnights at $5.50/FN = $16.5 CAD HST 13% = $2.145 CAD Total = $18.645 CAD
 		/// </example>
 
-		/*i got this output  (1 fortnights at $5.50/FN = $5.5 CAD HST 13% = $0.715 CAD Total = $6.22 CAD) because i dont know logic for adding two decimal poin*/
+		/*i got this output  (1 fortnights at $5.50/FN = $5.5 CAD HST 13% = $0.715 CAD Total = $6.215 CAD) because i dont know logic for adding two decimal poin*/
 
 		public string Get(int id)
 		{
@@ -41,7 +41,7 @@ namespace MyfirstProjectN01708024.Controllers
 
 			string charge = $"{fortnights} fortnights at $5.50/FN = ${chargetoclient} CAD";
 			string hst = $"HST 13% = ${hstcost} CAD";
-			string totalcharge = $"Total = ${total:F2} CAD";
+			string totalcharge = $"Total = ${total} CAD";
 
 			return $"{charge}\n{hst}\n{totalcharge}";
 
